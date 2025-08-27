@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:frontendmasters.com)",
+      "Read(//Users/rjgar/Github/personal_page/**)",
+      "Read(//Users/rjgar/Github/personal_page/**)",
+      "Bash(npm start)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

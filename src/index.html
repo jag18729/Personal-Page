@@ -22,6 +22,28 @@
       src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
     ></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 0.3s;
+      }
+      details summary {
+        cursor: pointer;
+        padding: 0.5rem;
+        background: #f8f9fa;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+      }
+      details summary:hover {
+        background: #e9ecef;
+      }
+      details[open] summary {
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <div id="top"></div>
@@ -63,9 +85,17 @@
               <p class="about-wrapper__info-text">
               Veteran & loving husband that enjoys working with technologies & solve problems.
               </p>
-              <p class="about-wrapper__info-text">
-                Extra Information about you! like hobbies and your goals.
-              </p>
+              <details>
+                <summary style="color: #007bff;">More about me...</summary>
+                <div>
+                  <p class="about-wrapper__info-text">
+                    <strong>Specializations:</strong> Network Security, Penetration Testing, Cloud Security
+                  </p>
+                  <p class="about-wrapper__info-text">
+                    <strong>Current Focus:</strong> Building secure infrastructure and security automation tools
+                  </p>
+                </div>
+              </details>
               <span class="d-flex mt-3">
                 <a
                   rel="noreferrer"
@@ -91,15 +121,16 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 0</h3>
+                <h3 class="project-wrapper__text-title">Security Scanner</h3>
                 <div>
                   <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
+                    Automated vulnerability scanner that identifies security issues in web applications
+                    and network infrastructure. Features comprehensive reporting and remediation suggestions.
                   </p>
+                  <details>
+                    <summary>Technical Stack</summary>
+                    <p>Python, Nmap, SQLite, Flask API</p>
+                  </details>
                 </div>
                 <a
                   rel="noreferrer"
@@ -145,15 +176,16 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 1</h3>
+                <h3 class="project-wrapper__text-title">Network Monitor</h3>
                 <div>
                   <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
+                    Real-time network traffic analyzer with anomaly detection capabilities.
+                    Provides dashboard visualizations and automated alerting for suspicious activities.
                   </p>
+                  <details>
+                    <summary>Technical Stack</summary>
+                    <p>React, Node.js, WebSockets, D3.js</p>
+                  </details>
                 </div>
                 <a
                   rel="noreferrer"
@@ -199,15 +231,16 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 2</h3>
+                <h3 class="project-wrapper__text-title">Firewall Manager</h3>
                 <div>
                   <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
+                    Web-based firewall configuration tool that simplifies rule management
+                    and provides visual network policy mapping with conflict detection.
                   </p>
+                  <details>
+                    <summary>Technical Stack</summary>
+                    <p>Vue.js, Python Flask, iptables integration</p>
+                  </details>
                 </div>
                 <a
                   rel="noreferrer"
@@ -258,7 +291,7 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
+          <p class="contact-wrapper__text">Let's collaborate on secure solutions!</p>
           <a
             rel="noreferrer"
             target="_blank"
