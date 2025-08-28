@@ -1,9 +1,13 @@
 import nmap
+import sys
 
-# Replace {{target}} with the IP address or hostname of the target machine
-target = "192.168.2.8"
-# Replace {{port}} with the port number you want to scan
-port = "1234"
+# Get target and port from command line arguments or user input
+if len(sys.argv) > 1:
+    target = sys.argv[1]
+    port = sys.argv[2] if len(sys.argv) > 2 else "80"
+else:
+    target = input("Enter target IP or hostname: ")
+    port = input("Enter port (default 80): ") or "80"
 
 # Create an instance of the PortScanner class
 scanner = nmap.PortScanner()
