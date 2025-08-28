@@ -6,7 +6,8 @@
       "Read(//Users/rjgar/Github/personal_page/**)",
       "Bash(npm start)",
       "Bash(gh repo view:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(gh repo edit:*)"
     ],
     "deny": [],
     "ask": []
