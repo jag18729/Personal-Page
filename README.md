@@ -1,6 +1,6 @@
-# Rafael Garcia - Portfolio
+# Rafael Garcia - Network Development Engineer Portfolio
 
-Professional portfolio website showcasing network security and development expertise.
+Professional portfolio website showcasing 15+ years of network engineering expertise, currently at NASA JPL.
 
 ## 🔗 Live Demo
 [View Portfolio](https://jag18729.github.io/Personal-Page/)
@@ -37,7 +37,7 @@ Production files will be in the `dist/` folder.
 
 ## 📧 Contact
 - [LinkedIn](https://www.linkedin.com/in/rafael-garcia-835aa1120/)
-- [Email](mailto:rafel.garcia.contact.me@gmail.com)
+- [Email](mailto:rjgarcia.0.100@outlook.com)
 - [GitHub](https://github.com/jag18729)
 
 ## 📄 License
