@@ -1,13 +1,22 @@
-// COLORS
-$primary-color: #a31300;
-$secondary-color: #a31300;
+// DRACULA THEME COLORS
+$primary-color: #bd93f9;      // Purple
+$secondary-color: #ff79c6;    // Pink
 
-$white-color: #fff;
+$white-color: #f8f8f2;        // Foreground
+$dark-grey: #282a36;          // Background
+$light-grey: #44475a;         // Current Line
 
-$dark-grey: #333333;
-$light-grey: #d2d2d2;
+$dark-blue-text: #f8f8f2;     // Headings (light on dark)
 
-$dark-blue-text: #272341; // For Headings
+// Dracula accents
+$cyan: #8be9fd;
+$green: #50fa7b;
+$orange: #ffb86c;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$red: #ff5555;
+$yellow: #f1fa8c;
+$comment: #6272a4;
 
 // FONT SIZE
 $default-font-size: 1.6rem;
