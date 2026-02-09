@@ -75,4 +75,4 @@ Desktop.ini
 
 # Test files (if you don't want to share)
 test-features.html
-setup-github.sh
+setup-github.sh.DS_Store
