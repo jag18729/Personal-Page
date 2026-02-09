@@ -1,0 +1,36 @@
+{
+  "models": [
+    {
+      "title": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "description": "Run tests",
+      "prompt": "Run the test suite and fix any failing tests"
+    },
+    {
+      "name": "optimize",
+      "description": "Optimize performance",
+      "prompt": "Analyze and optimize the performance of this code"
+    }
+  ],
+  "rules": [
+    "Always maintain consistent code style",
+    "Follow security best practices",
+    "Write clean, maintainable code",
+    "Add comments for complex logic",
+    "Keep functions small and focused"
+  ],
+  "contextProviders": [
+    {
+      "name": "file",
+      "params": {
+        "path": "src/"
+      }
+    }
+  ]
+}

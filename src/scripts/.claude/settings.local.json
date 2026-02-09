@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:frontendmasters.com)",
+      "Read(//Users/rjgar/Github/personal_page/**)",
+      "Read(//Users/rjgar/Github/personal_page/**)",
+      "Bash(npm start)",
+      "Bash(gh repo view:*)",
+      "Bash(git add:*)",
+      "Bash(gh repo edit:*)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

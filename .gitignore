@@ -1,2 +1,78 @@
+# Dependencies
 node_modules/
-.parcel-cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.map
+.parcel-cache/
+.cache/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python virtual environment (from your scripts)
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Testing
+coverage/
+.nyc_output/
+
+# Personal/sensitive files
+assets/resume.pdf
+assets/cv.pdf
+*.private.*
+secrets/
+credentials/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+temp/
+tmp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Test files (if you don't want to share)
+test-features.html
+setup-github.sh

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        .working {
+            background: #d4edda;
+            color: #155724;
+        }
+        .not-working {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        details summary {
+            cursor: pointer;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        details summary:hover {
+            background: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Feature Test</h1>
+    
+    <div class="test-section">
+        <h2>1. Details/Summary Elements</h2>
+        <details>
+            <summary>Click to expand (this should work)</summary>
+            <p>✅ If you can see this text, the details/summary element is working!</p>
+        </details>
+    </div>
+
+    <div class="test-section">
+        <h2>2. View Transitions CSS</h2>
+        <p>View transitions are applied. You should see smooth animations when navigating (in supported browsers like Chrome 111+)</p>
+        <code>@view-transition { navigation: auto; }</code>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Check Main Site Features</h2>
+        <p>Open your main site at <a href="http://127.0.0.1:5500/src/index.html" target="_blank">http://127.0.0.1:5500/src/index.html</a> and verify:</p>
+        <ul>
+            <li>✓ "More about me..." expandable section in About area</li>
+            <li>✓ "Technical Stack" expandable details in each project</li>
+            <li>✓ Updated project titles (Security Scanner, Network Monitor, Firewall Manager)</li>
+            <li>✓ Updated contact text: "Let's collaborate on secure solutions!"</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Browser Console Check</h2>
+        <p>Open browser DevTools (F12) and check for any JavaScript errors in the console.</p>
+    </div>
+
+    <script>
+        // Test if details element is supported
+        const detailsSupported = 'open' in document.createElement('details');
+        console.log('Details element supported:', detailsSupported);
+        
+        // Test if view transitions API is available
+        const viewTransitionsSupported = 'startViewTransition' in document;
+        console.log('View Transitions API supported:', viewTransitionsSupported);
+        
+        // Add status indicators
+        document.addEventListener('DOMContentLoaded', () => {
+            const statusText = detailsSupported ? 
+                '<span class="status working">✓ Details/Summary Working</span>' : 
+                '<span class="status not-working">✗ Details/Summary Not Supported</span>';
+            
+            const h1 = document.querySelector('h1');
+            h1.innerHTML += ' ' + statusText;
+        });
+    </script>
+</body>
+</html>

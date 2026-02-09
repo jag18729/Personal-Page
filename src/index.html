@@ -1,218 +1,376 @@
 <!DOCTYPE html>
 <html lang="en" class="sr">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="/icons8-male-user-50.png">
-    <title>Rafael J. Garcia | Profile Page</title>
-    <meta name="keywords" content="[ekoe299], [Rafael Garcia], Network, Security">
-    <meta name="description" content="[Rafael Garcia] | Developer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/index.4a508c1d.css">
-    <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <title>Rafael J. Garcia | Network Development Engineer</title>
+    <meta name="keywords" content="Rafael Garcia, Network Engineer, Cloud Infrastructure, AWS, Python Automation, NASA JPL" />
+    <meta name="description" content="Network Engineer with 15+ years experience in enterprise network design, automation, and cloud infrastructure" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.scss" />
+    <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <style>
+      :root {
+        --bg: #282a36;
+        --bg-light: #44475a;
+        --fg: #f8f8f2;
+        --comment: #6272a4;
+        --cyan: #8be9fd;
+        --green: #50fa7b;
+        --orange: #ffb86c;
+        --pink: #ff79c6;
+        --purple: #bd93f9;
+        --red: #ff5555;
+        --yellow: #f1fa8c;
+      }
+      body { background: var(--bg); color: var(--fg); }
+      .section-title { color: var(--purple) !important; }
+      .text-color-main { color: var(--cyan) !important; }
+      
+      #hero { background: linear-gradient(135deg, var(--bg) 0%, #1a1b26 100%); }
+      .hero-title { color: var(--fg); }
+      
+      .cta-btn--hero {
+        background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%) !important;
+        border: none !important;
+        color: var(--bg) !important;
+        font-weight: 600;
+      }
+      .cta-btn--hero:hover {
+        background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(189, 147, 249, 0.4);
+      }
+      .cta-btn--resume {
+        border-color: var(--cyan) !important;
+        color: var(--cyan) !important;
+      }
+      .cta-btn--resume:hover {
+        background: var(--cyan) !important;
+        color: var(--bg) !important;
+      }
+      
+      #about { background: var(--bg-light); }
+      .about-wrapper__info-text { color: var(--fg); }
+      
+      /* Skills inline */
+      .skills-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; justify-content: center; }
+      .skill-tag {
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+      
+      /* Experience */
+      .exp-section { background: var(--bg); padding: 5rem 0; }
+      .exp-card {
+        background: var(--bg-light);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+        border-left: 4px solid var(--purple);
+      }
+      .exp-card h3 { color: var(--cyan); margin-bottom: 0.5rem; }
+      .exp-card .company { color: var(--pink); font-weight: 600; }
+      .exp-card .dates { color: var(--comment); font-size: 0.9rem; }
+      .exp-card p { color: var(--fg); margin-top: 1rem; }
+      
+      /* Accomplishments (certs + badges) */
+      .acc-section { background: var(--bg-light); padding: 5rem 0; }
+      .badge-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+      
+      /* Projects */
+      #projects { background: var(--bg); }
+      .project-visual {
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+      .project-visual:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      }
+      .proj-tag {
+        display: inline-block;
+        background: rgba(40, 42, 54, 0.3);
+        color: var(--bg);
+        padding: 0.25rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin: 0.2rem;
+      }
+      .proj-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1.2rem;
+        background: var(--bg);
+        color: var(--fg) !important;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .proj-link:hover {
+        background: var(--bg-light);
+        transform: translateY(-2px);
+      }
+      .project-card {
+        background: var(--bg-light);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--cyan);
+        text-align: left;
+      }
+      .project-card h3 { color: var(--cyan); margin-bottom: 0.5rem; font-size: 1.2rem; }
+      .project-card p { color: var(--fg); }
+      .project-card .tech { color: var(--orange); font-size: 0.85rem; margin-top: 1rem; }
+      
+      /* Contact */
+      #contact { background: var(--bg-light); }
+      .contact-wrapper__text { color: var(--fg); }
+      
+      /* Footer */
+      .footer { background: var(--bg) !important; }
+      .footer__text { color: var(--comment); }
+      .social-links a { color: var(--purple) !important; }
+      .social-links a:hover { color: var(--cyan) !important; }
+      .back-to-top i { color: var(--purple); }
+      
+      /* Simple fade-in animations */
+      .project-visual, .project-card, .exp-card {
+        animation: fadeInUp 0.6s ease-out both;
+      }
+      .project-visual:nth-child(1), .exp-card:nth-child(1) { animation-delay: 0.1s; }
+      .project-visual:nth-child(2), .exp-card:nth-child(2) { animation-delay: 0.2s; }
+      .project-visual:nth-child(3), .exp-card:nth-child(3) { animation-delay: 0.3s; }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
   </head>
   <body>
     <div id="top"></div>
-<section id="hero" class="jumbotron">
+
+    <!-- Hero -->
+    <section id="hero" class="jumbotron">
       <div class="container">
-        <h2 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Rafael</span> & I am
-          <br>
-          a Network & Security Expert
-        </h2>
+        <h1 class="hero-title load-hidden">
+          Hi, I'm <span class="text-color-main">Rafael Garcia</span>
+          <br />
+          Network Development Engineer
+        </h1>
         <p class="hero-cta load-hidden">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
         </p>
       </div>
     </section>
+
+    <!-- About -->
     <section id="about">
       <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
+        <h2 class="section-title load-hidden">About</h2>
         <div class="row about-wrapper">
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__image load-hidden">
-              <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="400px" src="/rock_pic.jpg">
+              <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="400px" src="assets/profile.jpg" />
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info load-hidden">
-              <h1 class="about-wrapper__info-text">
-              Always on the move for the next challange.  
-              </h1>
+              <p class="about-wrapper__info-text">
+                <strong>11+ years in network engineering</strong> with experience at NASA JPL. U.S. Marine Corps veteran.
               </p>
               <p class="about-wrapper__info-text">
-              Loving husband and technology nerd.
+                I build network performance dashboards for enterprise quality metrics, design and implement IaC with AWS CloudFormation, and lead proof of concept rollouts for new infrastructure. Experienced in production DNS server migrations and enterprise network optimization.
               </p>
-              <p class="about-wrapper__info-text">
-              After serving 8 years as a Communications Team Leader in the U.S. Marine Corps.
-              </p>
-              <p class="about-wrapper__info-text">
-              I took on the journey to go back to school and become a Security Enginner.
+              <div class="skills-row">
+                <span class="skill-tag" style="background: var(--purple); color: var(--bg);">Python</span>
+                <span class="skill-tag" style="background: var(--cyan); color: var(--bg);">Ansible</span>
+                <span class="skill-tag" style="background: var(--pink); color: var(--bg);">Palo Alto</span>
+                <span class="skill-tag" style="background: var(--green); color: var(--bg);">BGP/OSPF</span>
+                <span class="skill-tag" style="background: var(--orange); color: var(--bg);">AWS</span>
+                <span class="skill-tag" style="background: var(--yellow); color: var(--bg);">Infoblox</span>
+              </div>
               <span class="d-flex mt-3">
-                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="/assets/Resume3.1.pdf">
-                  View Resume
-                </a>
+                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="https://1drv.ms/b/c/a632e9aec06bdd10/IQDvBu_QxATCS7BPKl9S3HsJAdqVmo63HML69eZhUKojWpU?e=p7XbwG">View Resume</a>
               </span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /END About Section -->
-    <!-- **** Projects Section **** -->
-    <section id="projects">
+
+    <!-- Experience -->
+    <section class="exp-section">
       <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Experience</h2>
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Network Manager </h3>
-                <div>
-                  <h4 class="mb-4">
-                    Manage a 4700+ sq. ft realestate property, hosting and administring video surveillance systems and WAPs/ Wifi Extenders
-                  </h4>
-                  <h4>
-                  Segmented with VLANs and ACL rules to ensure no east-to-west communication.
-                  </h4>
-                  <h4>
-                  Manage camera footage and data storage (DVR).
-                  </h4>
-                  <h4>
-                  Host Free Wifi network with security capabilities
-                  </h4>
-                </div>
-                <!-- <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
-                  See Live
-                </a>
-                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-                  Source Code
-                </a> -->
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                    <img alt="Project Image" class="img-fluid" src="/diagram_ubiquity.png">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /END Project -->
-
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Communications Team Leader</h3>
-                <div>
-                  <p class="mb-4">
-                  Programmed and maintained various amounts of communications devices. To include encrypted radios, computers, GPS systems, antennnas and many more devices. Troubleshooting and training personnel to ensure the highest quality of communication. 
-                  </p>
-                </div>
-                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="/assets/nam.pdf">
-                  Award 🏅
-                </a>
-                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="/assets/Garcia letter of recommendation.pdf">
-                  Letter of Reccomendation
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                    <img alt="Project Image" class="img-fluid" src="/radio_antenna.jpg">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /END Project -->
-
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Physical Security Professional</h3>
-                <div>
-                  <p class="mb-4">
-                    Over 5000 hours protecting some of the most at-risk public-figures and individuals in the world.
-                    Experience with Command Center operations, conducting threat assesments and server management.
-                    Played key roles on a full-time security team that protected an at-risk family 24 hours a day /
-                    365 days a year.
-                  </p>
-                </div>
-                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="/assets/GDBA Portfolio.pdf">
-                  See Portfolio
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                    <img alt="Project Image" height="auto" width="400px" class="img-fluid" src="/gdba.jpg">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /END Project -->
-          <!-- Certifications -->
-          <h2 class="section-title dark-blue-text">Certifications</h2>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d2b6d758-6dfb-43cb-9bd0-ef557736e979" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ed2de0ba-5d78-4b68-b02a-eb32f6294658" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="778d7ac1-b3dc-489d-82dd-01d116fe8046" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="db59ab16-86e9-4c2a-a0f1-e3583b547438" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ecde88b0-6ec7-4480-91c7-7151e5d8769a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="exp-card">
+          <h3>Network Development Engineer</h3>
+          <span class="company">NASA JPL via MORI Associates</span>
+          <span class="dates"> · 2022 - 2025</span>
+          <p>Deep Space Network infrastructure. Built network performance dashboards for quality metrics. Designed IaC solutions with AWS CloudFormation. Led proof of concept rollouts and production DNS server migrations.</p>
+        </div>
+        
+        <div class="exp-card">
+          <h3>Communications Section Leader</h3>
+          <span class="company">U.S. Marine Corps</span>
+          <span class="dates"> · 2012 - 2022</span>
+          <p>Led communications section overseeing tactical and garrison network operations. Managed secure communications infrastructure and network teams supporting 500+ users in deployed environments.</p>
         </div>
       </div>
     </section>
-    <!-- /END Projects Section -->
-    <!-- **** Contact Section **** -->
+
+    <!-- Projects -->
+    <section id="projects" style="padding: 5rem 0;">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        
+        <!-- Personal Projects - Visual Cards -->
+        <div class="row" style="margin-top: 3rem;">
+          
+          <!-- vandine.us -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-visual" style="background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%); border-radius: 12px; overflow: hidden; height: 100%;">
+              <div style="padding: 2rem; text-align: center;">
+                <i class="fa fa-server fa-3x" style="color: var(--bg); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--bg); font-size: 1.4rem; margin-bottom: 0.5rem;">vandine.us</h3>
+                <p style="color: var(--bg); opacity: 0.9; font-size: 0.95rem;">Home lab infrastructure portal with real-time monitoring, Cloudflare tunnel, and observability stack.</p>
+                <div style="margin-top: 1rem;">
+                  <span class="proj-tag">Grafana</span>
+                  <span class="proj-tag">Prometheus</span>
+                  <span class="proj-tag">Cloudflare</span>
+                  <span class="proj-tag">Docker</span>
+                </div>
+                <a href="https://vandine.us" target="_blank" rel="noreferrer" class="proj-link">
+                  <i class="fa fa-external-link"></i> Live Site
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- GuardQuote -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-visual" style="background: linear-gradient(135deg, var(--cyan) 0%, var(--green) 100%); border-radius: 12px; overflow: hidden; height: 100%;">
+              <div style="padding: 2rem; text-align: center;">
+                <i class="fa fa-shield fa-3x" style="color: var(--bg); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--bg); font-size: 1.4rem; margin-bottom: 0.5rem;">GuardQuote</h3>
+                <p style="color: var(--bg); opacity: 0.9; font-size: 0.95rem;">ML-powered insurance quote platform. Full-stack app with React frontend, Node.js API, and PostgreSQL.</p>
+                <div style="margin-top: 1rem;">
+                  <span class="proj-tag">React</span>
+                  <span class="proj-tag">Node.js</span>
+                  <span class="proj-tag">PostgreSQL</span>
+                  <span class="proj-tag">Datadog APM</span>
+                </div>
+                <a href="https://guardquote.vandine.us" target="_blank" rel="noreferrer" class="proj-link">
+                  <i class="fa fa-external-link"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Matrix Lab -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-visual" style="background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%); border-radius: 12px; overflow: hidden; height: 100%;">
+              <div style="padding: 2rem; text-align: center;">
+                <i class="fa fa-sitemap fa-3x" style="color: var(--bg); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--bg); font-size: 1.4rem; margin-bottom: 0.5rem;">Matrix Lab</h3>
+                <p style="color: var(--bg); opacity: 0.9; font-size: 0.95rem;">Raspberry Pi cluster running Kubernetes, LDAP auth, centralized logging, and network automation.</p>
+                <div style="margin-top: 1rem;">
+                  <span class="proj-tag">Ansible</span>
+                  <span class="proj-tag">Pi Cluster</span>
+                  <span class="proj-tag">LDAP</span>
+                  <span class="proj-tag">Loki</span>
+                </div>
+                <a href="https://github.com/jag18729" target="_blank" rel="noreferrer" class="proj-link">
+                  <i class="fa fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Professional Projects -->
+        <h3 style="color: var(--comment); margin-top: 3rem; margin-bottom: 2rem; text-align: center;">Professional Work</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="project-card">
+              <h3><i class="fa fa-signal" style="margin-right: 0.5rem;"></i>Starlink + PA-440 Integration</h3>
+              <p>Satellite connectivity with Palo Alto PA-440 for remote site redundancy. SD-WAN failover between terrestrial and satellite links.</p>
+              <div class="tech">Palo Alto PA-440 · Starlink Business · SD-WAN · BGP</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="project-card">
+              <h3><i class="fa fa-database" style="margin-right: 0.5rem;"></i>Production DNS Migration</h3>
+              <p>Migrated production DNS servers for enterprise infrastructure. Designed rollout strategy, validated configurations, and executed cutover with minimal downtime.</p>
+              <div class="tech">Infoblox DDI · Python · IaC · AWS CloudFormation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accomplishments -->
+    <section class="acc-section">
+      <div class="container">
+        <h2 class="section-title">Accomplishments</h2>
+        
+        <div class="badge-row">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a70e9a21-c935-4bdd-b627-476698bb5190" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a9176887-7a9e-4f7f-a075-53152b118b8e" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cc2a4c33-049d-4968-a08d-5f172b78dce6" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="https://www.credly.com/users/rafael-garcia-1872" target="_blank" rel="noreferrer" class="cta-btn cta-btn--resume">
+            View All on Credly
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper load-hidden">
-          <h1 class="contact-wrapper__text">Let's connect!</h1>
-          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:rafel.garcia.contact.me@gmail.com">Send Email</a>
+          <p class="contact-wrapper__text">Let's connect.</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:rjgarcia.0.100@outlook.com">Send Email</a>
         </div>
       </div>
     </section>
-    <!-- /END Contact Section -->
 
-    <!-- **** Footer Section **** -->
+    <!-- Footer -->
     <footer class="footer navbar-static-bottom">
       <div class="container">
         <a rel="noreferrer" href="#top" class="back-to-top">
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
-          <a rel="noreferrer" href="tel:818-741-8210" target="_blank">
-            <i class="fa fa-phone" aria-hidden="true" ></i>
-          </a>
           <a rel="noreferrer" href="https://www.linkedin.com/in/rafael-garcia-835aa1120/" target="_blank">
             <i class="fa fa-linkedin fa-inverse"></i>
           </a>
-          <a rel="noreferrer" href="https://github.com/rjgarcia299" target="_blank">
-            <i class="fa fa-github fa-inverse" ></i>
+          <a rel="noreferrer" href="https://github.com/jag18729" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
           </a>
         </div>
+        <hr style="border-color: var(--comment);" />
+        <p class="footer__text">© 2026 Rafael Garcia</p>
+      </div>
+    </footer>
 
-        <hr>
-
-        <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
-        <p class="footer__text">
-          © 2022 - developed by
-          <a rel="noreferrer" href="https://github.com/rjgarcia299" target="_blank">Rafael Garcia</a>
-        </p>
-    <script defer="" src="/index.975ef6c8.js"></script>
+    <script defer type="module" src="index.js"></script>
   </body>
 </html>
