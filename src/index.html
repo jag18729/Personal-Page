@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.scss" />
     <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
@@ -70,8 +70,10 @@
       .skill-tag {
         padding: 0.4rem 0.8rem;
         border-radius: 4px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 600;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.03em;
       }
       
       /* Experience */
@@ -86,7 +88,7 @@
       }
       .exp-card h3 { color: var(--cyan); margin-bottom: 0.5rem; }
       .exp-card .company { color: var(--pink); font-weight: 600; }
-      .exp-card .dates { color: var(--comment); font-size: 0.9rem; }
+      .exp-card .dates { color: var(--comment); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; }
       .exp-card p { color: var(--fg); margin-top: 1rem; }
       
       /* Accomplishments (certs + badges) */
@@ -109,8 +111,10 @@
         color: var(--bg);
         padding: 0.25rem 0.6rem;
         border-radius: 4px;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 600;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.03em;
         margin: 0.2rem;
       }
       .proj-link {
